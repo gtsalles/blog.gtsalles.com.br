@@ -1,0 +1,27 @@
+baseurl = "https://blog.gtsalles.com.br"
+languageCode = "pt-BR"
+pagination = 5
+title = "blog.gtsalles.com.br"
+theme = "greyshade"
+publishDir = "docs"
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+[author]
+name = "Gustavo Carvalho"
+email = "gt.salles@gmail.com"
+
+[params]
+description = "python, linux, go, [...]"
+subscribe_rss = "/index.xml"
+facebook_user = "gc.salles"
+twitter_user = "gt_salles"
+github_user = "gtsalles"
+linkedin_user = "gtsalles"
+
+facebook_like = true
+twitter_tweet_button = true
+disqus_short_name = "gtsalles"
+disqus_show_comment_count = false
