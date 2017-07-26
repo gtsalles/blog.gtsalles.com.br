@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Erro 500 on blog.gtsalles.com.br </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://blog.gtsalles.com.br/tags/erro-500/</link>
+    <language>pt-BR</language>
+    <author>Gustavo Carvalho</author>
+    
+    <updated>Tue, 28 May 2013 19:13:00 -03</updated>
+    
+    <item>
+      <title>Internal Server Error no Deploy de Aplicação Django</title>
+      <link>http://blog.gtsalles.com.br/post/internal-server-error-no-deploy-de-aplicacao-django/</link>
+      <pubDate>Tue, 28 May 2013 19:13:00 -03</pubDate>
+      <author>Gustavo Carvalho</author>
+      <guid>http://blog.gtsalles.com.br/post/internal-server-error-no-deploy-de-aplicacao-django/</guid>
+      <description>&lt;p&gt;Recentemente desenvolvi um projeto em Django e depois do deploy, quando o &lt;code&gt;DEBUG&lt;/code&gt; foi setado para &lt;code&gt;False&lt;/code&gt;, o site começou gerar o erro 500.&lt;/p&gt;
+
+&lt;p&gt;Perambulando por aí descobri que como medida se segurança, as versões mais recentes do Django introduziram uma configuração chamada allowed hosts pra prevenir &lt;a href=&#34;http://pt.wikipedia.org/wiki/DNS_cache_poisoning&#34;&gt;&amp;ldquo;envenenamento de cache&amp;rdquo;&lt;/a&gt;. Essa configuração é uma lista dos hosts/domínios os quais esse site pode servir.&lt;/p&gt;
+
+&lt;p&gt;Para resolver o problema, basta incluir no seu &lt;code&gt;settings.py&lt;/code&gt; a configuração &lt;code&gt;ALLOWED_HOSTS&lt;/code&gt; contendo uma lista com os seus endereços de domínio e/ou IP&amp;rsquo;s do seu servidor.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ALLOWED_HOSTS = [&#39;exemplo.com.br&#39;, &#39;11.22.33.44&#39;, &#39;127.0.0.1&#39;]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Espero ter ajudado.&lt;/p&gt;
+
+&lt;p&gt;Agradecimentos a &lt;a href=&#34;http://getluky.net/2013/02/21/django-debugfalse-and-allowed_hosts/&#34;&gt;Gordon Luk&lt;/a&gt; e &lt;a href=&#34;https://twitter.com/henriquebastos&#34;&gt;Henrique Bastos&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

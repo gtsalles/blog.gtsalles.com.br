@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+
+<html lang="pt-BR">
+
+<head>
+	<meta charset="utf-8">
+	<title>Context Processors - blog.gtsalles.com.br</title>
+	<meta name="author" content="map[name:Gustavo Carvalho email:gt.salles@gmail.com]">
+
+	
+	
+	<meta name="description" content="">
+	
+
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link href='/index.xml' rel="alternate" title="blog.gtsalles.com.br" type="application/atom+xml">
+	
+	<link rel="canonical" href="http://blog.gtsalles.com.br/post/context-processors/">
+	<link href="http://blog.gtsalles.com.br/favicon.png" rel="shortcut icon">
+	<link href="http://blog.gtsalles.com.br/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="http://blog.gtsalles.com.br/css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+  
+
+</head>
+
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner"><div class="profilepic">
+	
+	
+	<script src="http://blog.gtsalles.com.br/js/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('gt.salles@gmail.com') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	
+	
+</div>
+
+<nav id="main-nav"><ul class="main">
+    <li><a href="/">Blog</a></li>
+    <li><a href="http://about.me/gt.salles">About</a></li>
+    <li><a href="/post/">Archives</a></li>
+</ul>
+
+<section class="aboutme">
+  <p>
+    python, linux, go, [...]
+  </p>
+</section>
+</nav>
+<nav id="sub-nav">
+	<div class="social">
+		
+			<a class="email" href='mailto:gt.salles@gmail.com' title="Email">Email</a>
+		
+		
+		
+		
+			<a class="twitter" href='http://twitter.com/gt_salles' title="Twitter">Twitter</a>
+		
+		
+			<a class="github" href='https://github.com/gtsalles' title="GitHub">GitHub</a>
+		
+		
+		
+		  <a class="stackoverflow" href='http://stackoverflow.com/users/2188792/gustavo-carvalho' title="StackOverflow"></a>
+		
+		
+			<a class="linkedin" href='http://www.linkedin.com/in/gtsalles' title="LinkedIn">LinkedIn</a>
+		
+		
+		
+		
+		
+		
+		
+    	
+    	
+			<a class="rss" href='/index.xml' title="RSS">RSS</a>
+		
+	</div>
+</nav>
+</header>
+			</div>
+		</div>
+		<div class="mid-col">
+			
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+					<div itemscope itemtype="http://schema.org/Blog">
+					<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="title" itemprop="name">Context Processors</h1>
+	<div class="entry-content" itemprop="articleBody"><p>Template Context Processors (TCP) é uma feature que o Django utiliza pra acessar variáveis em qualquer template. Provavelmente já os usamos diversas vezes sem perceber, seja no <code>MEDIA_URL</code>, <code>STATIC_URL</code>, debug ou mesmo no user, que retorna o usuário atualmente autenticado na sessão ou um objeto AnonymousUser caso não esteja autenticado.</p>
+
+<p>Todos esses exemplos podem ser acessados simplesmente por <code>{{ user }}</code>, ou <code>{{ debug }}</code>, sendo que nenhuma dessas variáves está em nenhuma das views que escrevemos. Isso se dá porque no global_settings do Django, já existem alguns TCP pré-configurados. Por causa deles, é possível acessar essas (e outras) variáveis.</p>
+
+<p>Um exemplo diferente de aplicação seria um situação onde você precisa acessar um objeto em diversos templates diferentes. Uma solução para isso seria a de incluir no contexto de cada view o determinado objeto. Isso foge totalmente ao princípio DRY.</p>
+
+<p>Com TCP, o acesso ao objeto fica centralizado em um único arquivo na sua app, e, a partir daí, pode ser acessado em qualquer template. Mais ou menos isso:</p>
+
+<pre><code># app_name/context_processors.py
+
+from app_name.models import RandomModel
+
+def method_name(request):
+    &quot;&quot;&quot;
+    All objects of RandomModel will be available in any template
+    just using {{ random }}
+    &quot;&quot;&quot;
+
+    random_stuff = RandomModel.objects.all()
+    return {'random': random_stuff}
+</code></pre>
+
+<pre><code>
+# settings.py
+
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+
+TEMPLATE_CONTEXT_PROCESSORS += (
+    'app_name.context_processors.method_name'
+)
+</code></pre>
+
+<p>Antes de usar TCP, avalie bem se existe uma real necessidade para a sua aplicação. Pelo fato de ele estar setado no settings.py, ele sempre será executado independente de um template ou outro não o utilizar, isso pode gerar queries desnecessárias e com isso, perda de desempenho na aplicação. Em casos onde só é necessário acessar objetos em apenas alguns templates talvez o uso de <a href="https://docs.djangoproject.com/en/dev/howto/custom-template-tags/">Custom Template Tags</a> seja mais indicado.</p>
+
+<p>That&rsquo;s all ;)</p>
+</div></article>
+					
+						<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+	
+	</div>
+	
+  	<script type="text/javascript" src='http://s7.addthis.com/js/250/addthis_widget.js#pubid='></script>
+  	
+</div>
+
+					
+					
+					<section id="comment">
+					    <h1 class="title">Comments</h1>
+					    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+					</section>
+					
+					
+
+<script type="text/javascript">
+    
+    var disqus_shortname = 'gtsalles';
+
+    
+    
+
+    
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+    
+</script>
+
+
+				    </div>
+				</div>
+			</div>
+			<footer id="footer" class="inner">Copyright &copy; 2017
+
+    Gustavo Carvalho
+
+Design credit: <a href="http://shashankmehta.in/archive/2012/greyshade.html">Shashank Mehta</a>
+<script src="http://blog.gtsalles.com.br/js/slash.js"></script>
+<script src="http://blog.gtsalles.com.br/js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script></footer>
+		</div>
+	</div>
+	
+</body>
+</html>

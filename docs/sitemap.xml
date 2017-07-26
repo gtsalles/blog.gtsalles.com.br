@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://blog.gtsalles.com.br/</loc>
+    <lastmod>2014-01-07T23:56:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.gtsalles.com.br/post/customizando-admin-do-django/</loc>
+    <lastmod>2014-01-07T23:56:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.gtsalles.com.br/post/context-processors/</loc>
+    <lastmod>2014-01-04T22:34:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.gtsalles.com.br/post/python-brasil-9/</loc>
+    <lastmod>2013-11-23T09:49:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.gtsalles.com.br/post/primeiro-encontro-do-grupo-do-pug-pi/</loc>
+    <lastmod>2013-06-10T22:14:00-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://blog.gtsalles.com.br/post/internal-server-error-no-deploy-de-aplicacao-django/</loc>
+    <lastmod>2013-05-28T19:13:00-03:00</lastmod>
+  </url>
+  
+</urlset>

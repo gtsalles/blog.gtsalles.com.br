@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Django on blog.gtsalles.com.br </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://blog.gtsalles.com.br/categories/django/</link>
+    <language>pt-BR</language>
+    <author>Gustavo Carvalho</author>
+    
+    <updated>Tue, 07 Jan 2014 23:56:00 -03</updated>
+    
+    <item>
+      <title>Customizando Admin do Django</title>
+      <link>http://blog.gtsalles.com.br/post/customizando-admin-do-django/</link>
+      <pubDate>Tue, 07 Jan 2014 23:56:00 -03</pubDate>
+      <author>Gustavo Carvalho</author>
+      <guid>http://blog.gtsalles.com.br/post/customizando-admin-do-django/</guid>
+      <description>&lt;p&gt;Pra quem não teve a oportunidade de ver minha palestra na Python Brasil, falei de customizações na admin do Django. Seguem o vídeo e os slides :)&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/vfVwn7h1dUE&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;iframe src=&#34;//pt.slideshare.net/slideshow/embed_code/key/kIqLJTR5lS61qT&#34; width=&#34;425&#34; height=&#34;355&#34; frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt; &lt;/iframe&gt; &lt;div style=&#34;margin-bottom:5px&#34;&gt; &lt;strong&gt; &lt;a href=&#34;//pt.slideshare.net/gtsalles/python-26800388&#34; title=&#34;Customizando Admin do Django&#34; target=&#34;_blank&#34;&gt;Customizando Admin do Django&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&#34;//www.slideshare.net/gtsalles&#34; target=&#34;_blank&#34;&gt;Gustavo Carvalho&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Context Processors</title>
+      <link>http://blog.gtsalles.com.br/post/context-processors/</link>
+      <pubDate>Sat, 04 Jan 2014 22:34:00 -03</pubDate>
+      <author>Gustavo Carvalho</author>
+      <guid>http://blog.gtsalles.com.br/post/context-processors/</guid>
+      <description>&lt;p&gt;Template Context Processors (TCP) é uma feature que o Django utiliza pra acessar variáveis em qualquer template. Provavelmente já os usamos diversas vezes sem perceber, seja no &lt;code&gt;MEDIA_URL&lt;/code&gt;, &lt;code&gt;STATIC_URL&lt;/code&gt;, debug ou mesmo no user, que retorna o usuário atualmente autenticado na sessão ou um objeto AnonymousUser caso não esteja autenticado.&lt;/p&gt;
+
+&lt;p&gt;Todos esses exemplos podem ser acessados simplesmente por &lt;code&gt;{{ user }}&lt;/code&gt;, ou &lt;code&gt;{{ debug }}&lt;/code&gt;, sendo que nenhuma dessas variáves está em nenhuma das views que escrevemos. Isso se dá porque no global_settings do Django, já existem alguns TCP pré-configurados. Por causa deles, é possível acessar essas (e outras) variáveis.&lt;/p&gt;
+
+&lt;p&gt;Um exemplo diferente de aplicação seria um situação onde você precisa acessar um objeto em diversos templates diferentes. Uma solução para isso seria a de incluir no contexto de cada view o determinado objeto. Isso foge totalmente ao princípio DRY.&lt;/p&gt;
+
+&lt;p&gt;Com TCP, o acesso ao objeto fica centralizado em um único arquivo na sua app, e, a partir daí, pode ser acessado em qualquer template. Mais ou menos isso:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# app_name/context_processors.py
+
+from app_name.models import RandomModel
+
+def method_name(request):
+    &amp;quot;&amp;quot;&amp;quot;
+    All objects of RandomModel will be available in any template
+    just using {{ random }}
+    &amp;quot;&amp;quot;&amp;quot;
+
+    random_stuff = RandomModel.objects.all()
+    return {&#39;random&#39;: random_stuff}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;
+# settings.py
+
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+
+TEMPLATE_CONTEXT_PROCESSORS += (
+    &#39;app_name.context_processors.method_name&#39;
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Antes de usar TCP, avalie bem se existe uma real necessidade para a sua aplicação. Pelo fato de ele estar setado no settings.py, ele sempre será executado independente de um template ou outro não o utilizar, isso pode gerar queries desnecessárias e com isso, perda de desempenho na aplicação. Em casos onde só é necessário acessar objetos em apenas alguns templates talvez o uso de &lt;a href=&#34;https://docs.djangoproject.com/en/dev/howto/custom-template-tags/&#34;&gt;Custom Template Tags&lt;/a&gt; seja mais indicado.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s all ;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Internal Server Error no Deploy de Aplicação Django</title>
+      <link>http://blog.gtsalles.com.br/post/internal-server-error-no-deploy-de-aplicacao-django/</link>
+      <pubDate>Tue, 28 May 2013 19:13:00 -03</pubDate>
+      <author>Gustavo Carvalho</author>
+      <guid>http://blog.gtsalles.com.br/post/internal-server-error-no-deploy-de-aplicacao-django/</guid>
+      <description>&lt;p&gt;Recentemente desenvolvi um projeto em Django e depois do deploy, quando o &lt;code&gt;DEBUG&lt;/code&gt; foi setado para &lt;code&gt;False&lt;/code&gt;, o site começou gerar o erro 500.&lt;/p&gt;
+
+&lt;p&gt;Perambulando por aí descobri que como medida se segurança, as versões mais recentes do Django introduziram uma configuração chamada allowed hosts pra prevenir &lt;a href=&#34;http://pt.wikipedia.org/wiki/DNS_cache_poisoning&#34;&gt;&amp;ldquo;envenenamento de cache&amp;rdquo;&lt;/a&gt;. Essa configuração é uma lista dos hosts/domínios os quais esse site pode servir.&lt;/p&gt;
+
+&lt;p&gt;Para resolver o problema, basta incluir no seu &lt;code&gt;settings.py&lt;/code&gt; a configuração &lt;code&gt;ALLOWED_HOSTS&lt;/code&gt; contendo uma lista com os seus endereços de domínio e/ou IP&amp;rsquo;s do seu servidor.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ALLOWED_HOSTS = [&#39;exemplo.com.br&#39;, &#39;11.22.33.44&#39;, &#39;127.0.0.1&#39;]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Espero ter ajudado.&lt;/p&gt;
+
+&lt;p&gt;Agradecimentos a &lt;a href=&#34;http://getluky.net/2013/02/21/django-debugfalse-and-allowed_hosts/&#34;&gt;Gordon Luk&lt;/a&gt; e &lt;a href=&#34;https://twitter.com/henriquebastos&#34;&gt;Henrique Bastos&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

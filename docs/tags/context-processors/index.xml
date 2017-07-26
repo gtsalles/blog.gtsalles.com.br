@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Context Processors on blog.gtsalles.com.br </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://blog.gtsalles.com.br/tags/context-processors/</link>
+    <language>pt-BR</language>
+    <author>Gustavo Carvalho</author>
+    
+    <updated>Sat, 04 Jan 2014 22:34:00 -03</updated>
+    
+    <item>
+      <title>Context Processors</title>
+      <link>http://blog.gtsalles.com.br/post/context-processors/</link>
+      <pubDate>Sat, 04 Jan 2014 22:34:00 -03</pubDate>
+      <author>Gustavo Carvalho</author>
+      <guid>http://blog.gtsalles.com.br/post/context-processors/</guid>
+      <description>&lt;p&gt;Template Context Processors (TCP) é uma feature que o Django utiliza pra acessar variáveis em qualquer template. Provavelmente já os usamos diversas vezes sem perceber, seja no &lt;code&gt;MEDIA_URL&lt;/code&gt;, &lt;code&gt;STATIC_URL&lt;/code&gt;, debug ou mesmo no user, que retorna o usuário atualmente autenticado na sessão ou um objeto AnonymousUser caso não esteja autenticado.&lt;/p&gt;
+
+&lt;p&gt;Todos esses exemplos podem ser acessados simplesmente por &lt;code&gt;{{ user }}&lt;/code&gt;, ou &lt;code&gt;{{ debug }}&lt;/code&gt;, sendo que nenhuma dessas variáves está em nenhuma das views que escrevemos. Isso se dá porque no global_settings do Django, já existem alguns TCP pré-configurados. Por causa deles, é possível acessar essas (e outras) variáveis.&lt;/p&gt;
+
+&lt;p&gt;Um exemplo diferente de aplicação seria um situação onde você precisa acessar um objeto em diversos templates diferentes. Uma solução para isso seria a de incluir no contexto de cada view o determinado objeto. Isso foge totalmente ao princípio DRY.&lt;/p&gt;
+
+&lt;p&gt;Com TCP, o acesso ao objeto fica centralizado em um único arquivo na sua app, e, a partir daí, pode ser acessado em qualquer template. Mais ou menos isso:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# app_name/context_processors.py
+
+from app_name.models import RandomModel
+
+def method_name(request):
+    &amp;quot;&amp;quot;&amp;quot;
+    All objects of RandomModel will be available in any template
+    just using {{ random }}
+    &amp;quot;&amp;quot;&amp;quot;
+
+    random_stuff = RandomModel.objects.all()
+    return {&#39;random&#39;: random_stuff}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;
+# settings.py
+
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+
+TEMPLATE_CONTEXT_PROCESSORS += (
+    &#39;app_name.context_processors.method_name&#39;
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Antes de usar TCP, avalie bem se existe uma real necessidade para a sua aplicação. Pelo fato de ele estar setado no settings.py, ele sempre será executado independente de um template ou outro não o utilizar, isso pode gerar queries desnecessárias e com isso, perda de desempenho na aplicação. Em casos onde só é necessário acessar objetos em apenas alguns templates talvez o uso de &lt;a href=&#34;https://docs.djangoproject.com/en/dev/howto/custom-template-tags/&#34;&gt;Custom Template Tags&lt;/a&gt; seja mais indicado.&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s all ;)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

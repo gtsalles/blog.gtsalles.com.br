@@ -1,4 +1,4 @@
-baseurl = "https://blog.gtsalles.com.br"
+baseurl = "http://blog.gtsalles.com.br"
 languageCode = "pt-BR"
 pagination = 5
 title = "blog.gtsalles.com.br"
@@ -16,9 +16,10 @@ email = "gt.salles@gmail.com"
 [params]
 description = "python, linux, go, [...]"
 subscribe_rss = "/index.xml"
-facebook_user = "gc.salles"
-twitter_user = "gt_salles"
 github_user = "gtsalles"
+twitter_user = "gt_salles"
+stackoverflow_user_id = "2188792"
+stackoverflow_user = "gustavo-carvalho"
 linkedin_user = "gtsalles"
 
 facebook_like = true

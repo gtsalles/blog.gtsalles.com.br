@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Brasilia on blog.gtsalles.com.br </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://blog.gtsalles.com.br/tags/brasilia/</link>
+    <language>pt-BR</language>
+    <author>Gustavo Carvalho</author>
+    
+    <updated>Sat, 23 Nov 2013 09:49:00 -03</updated>
+    
+    <item>
+      <title>Python Brasil [9]</title>
+      <link>http://blog.gtsalles.com.br/post/python-brasil-9/</link>
+      <pubDate>Sat, 23 Nov 2013 09:49:00 -03</pubDate>
+      <author>Gustavo Carvalho</author>
+      <guid>http://blog.gtsalles.com.br/post/python-brasil-9/</guid>
+      <description>&lt;p&gt;Com mais de um mês desde a nona edição da &lt;a href=&#34;http://2013.pythonbrasil.org.br/pythonbrasil&#34;&gt;Python Brasil&lt;/a&gt;, finalmente consegui arrumar meia hora pra tentar (quando eu digo tentar, é só tentar mesmo) colocar em palavras o que foi o evento.&lt;/p&gt;
+
+&lt;p&gt;A minha experiência com comunidade é nova, iniciou-se em março/13 quando comecei a trabalhar com Python na &lt;a href=&#34;http://128bits.cc&#34;&gt;128Bits&lt;/a&gt; e, mais ainda na &lt;a href=&#34;http://2013.pythonnordeste.org/&#34;&gt;Python Nordeste 2013&lt;/a&gt;. Lá na #PyNe pude começar a ver a magnitude daquilo e comecei a imaginar até onde aquilo poderia me levar.&lt;/p&gt;
+
+&lt;p&gt;A Python Brasil conseguiu ser ainda mais incrível. Não só por ser a minha primeira, mas também porque logo de cara, fui como palestrante. Ainda hoje não sei descrever o que passou na minha cabeça quando tive a palestra aprovada. Não sabia se ficava feliz ou desesperado.&lt;/p&gt;
+
+&lt;p&gt;Passada toda a euforia e ansiedade antes da viagem, finalmente chegou o dia. Infelizmente acabei não chegando a tempo Django Day, tenho certeza que foi muito bom.&lt;/p&gt;
+
+&lt;p&gt;O evento pra mim, só começou mesmo depois da minha palestra que por sorte, foi no primeiro dia, antes disso não consegui me concentrar em nada e quando chegou a hora, apesar do (grande) nervosismo, acho que falei o que tinha pra falar. O vídeo da palestra vocês podem conferir aqui: &lt;a href=&#34;https://www.youtube.com/watch?v=vfVwn7h1dUE&#34;&gt;https://www.youtube.com/watch?v=vfVwn7h1dUE&lt;/a&gt; :)&lt;/p&gt;
+
+&lt;p&gt;Passada a tensão pude aproveitar o evento e fui ver as palestras. &lt;em&gt;Muita&lt;/em&gt; coisa boa, muita mesmo, era tenso escolher o que assistir com tanta coisa em paralelo. O que me confortava era saber que depois tudo ia estar disponível no &lt;a href=&#34;https://www.youtube.com/playlist?list=PLqjh1U8eZaP6TM0tCdLVeiB0LTBkaEBai&#34;&gt;Youtube&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;O evento foi muito bacana entre muitos motivos, por ter tido a oportunidade de conhecer muita gente, conheci pessoalmente &lt;a href=&#34;https://twitter.com/fernandogrd&#34;&gt;Fernando&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/_renatoOliveira&#34;&gt;Renato&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/raelmax&#34;&gt;Rael&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/franciscosouza&#34;&gt;Francisco Souza&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/viniciusban&#34;&gt;Vinícius&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/romulocollopy&#34;&gt;Rômulo&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/avelino0&#34;&gt;Avelino&lt;/a&gt;, &lt;a href=&#34;https://twitter.com/rochacbruno&#34;&gt;Bruno Rocha&lt;/a&gt;, revi &lt;a href=&#34;https://twitter.com/henriquebastos&#34;&gt;Henrique&lt;/a&gt;, enfim, muita gente.&lt;/p&gt;
+
+&lt;p&gt;No primeiro dia de evento à noite, saímos apenas pela cidade, não nos encontramos com ninguém da comunidade.&lt;/p&gt;
+
+&lt;p&gt;Passado mais um dia de palestras inscríveis, finalmente saímos pela primeira vez com a galera. Fomos num bar, e lá encontramos Henrique e, tive a oportunidade de conhecer a galera de Minas, desses só peguei contato do &lt;a href=&#34;https://twitter.com/joaojunior_ma&#34;&gt;João&lt;/a&gt; e do &lt;a href=&#34;https://twitter.com/cassiobotaro&#34;&gt;Cássio&lt;/a&gt;. Fiquei feliz porque vi uma galera animada, os &amp;ldquo;mineirim-come-queto&amp;rdquo; não são tão &amp;ldquo;mineirim-come-queto&amp;rdquo; :p. Achei massa também porque depois do evento acompanhei um pouco da movimentação do &lt;a href=&#34;https://groups.google.com/forum/#!forum/python-mg&#34;&gt;PUG-MG&lt;/a&gt; e vi que eles tão balançando as coisas lá por BH. Durante o evento surgiu até a ideia de fazer a Python Brasil 11 por lá, quem sabe a ideia não vai pra frente mesmo :D&lt;/p&gt;
+
+&lt;p&gt;Saímos novamente durante os dois dias seguintes, e sempre foi igualmente f*da. (Vou ficar devendo as fotos).&lt;/p&gt;
+
+&lt;p&gt;Não lembro se foi na #PyBr ou na #PyNe, mas lembro que o Henrique falou o seguinte:&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;Python é a minha desculpa pra viajar e conhecer pessoas.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Isso é a mais pura verdade. As palestras são boas? São, mas tá tudo no Youtube depois do evento. A ideia de verdade mesmo de um evento como esse é conhecer pessoas, rever quem você conhece, fazer conexões, profissionais ou mesmo criar amizades. Claro, tudo isso é bem melhor se regado a uma cerveja &lt;em&gt;bem&lt;/em&gt; gelada :D. #horaextra #ftw&lt;/p&gt;
+
+&lt;p&gt;Outro ponto positivo foi que outras pessoas do &lt;a href=&#34;https://www.facebook.com/groups/pugpi/&#34;&gt;PUG-PI&lt;/a&gt; puderam perceber isso, &lt;a href=&#34;https://twitter.com/mcastrosouza&#34;&gt;Marcos&lt;/a&gt; e Luckas voltaram bem empolgados. Eu acho que comunidade é uma bola de neve, uma pessoa conhece a comunidade, vê a maravilha que é, convida outra pessoa pra conhecer, e mais outra e por aí vai.&lt;/p&gt;
+
+&lt;p&gt;E pensar que até a minha palestra ter sido aceita eu ainda não estava totalmente decidido a ir. Hoje tenho em mente que anualmente faço no mínimo duas viagens: PyNe e PyBr. Todo ano, já prepararei o orçamento visando esses dois investimentos.&lt;/p&gt;
+
+&lt;p&gt;Minha próxima viagem já tem data marcada, 1, 2 e 3 de maio tô descendo em salvador ;)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

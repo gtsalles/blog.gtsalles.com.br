@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Coding Dojo on blog.gtsalles.com.br </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://blog.gtsalles.com.br/tags/coding-dojo/</link>
+    <language>pt-BR</language>
+    <author>Gustavo Carvalho</author>
+    
+    <updated>Mon, 10 Jun 2013 22:14:00 -03</updated>
+    
+    <item>
+      <title>Primeiro Encontro do Grupo de Usuários de Python do Piauí - PUG-PI</title>
+      <link>http://blog.gtsalles.com.br/post/primeiro-encontro-do-grupo-do-pug-pi/</link>
+      <pubDate>Mon, 10 Jun 2013 22:14:00 -03</pubDate>
+      <author>Gustavo Carvalho</author>
+      <guid>http://blog.gtsalles.com.br/post/primeiro-encontro-do-grupo-do-pug-pi/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://blog.gtsalles.com.br/img/DSCN0547_1.JPG&#34; alt=&#34;Primeiro encontro do PUG-PI&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Dia 07/06/13 foi realizado no DIE-UFPI o primeiro encontro do &lt;a href=&#34;https://www.facebook.com/groups/pugpi&#34;&gt;PUG-PI&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Confesso que superou as minhas expectativas. Imaginei que por ser o primeiro não teríamos aquela quantidade de pessoas (pelo menos a quantidade inicial), não contei, mas era algo entre 15 e 20 pessoas. É verdade que alguns precisaram sair antes do final e entendo muitos outros que não puderam comparecer, afinal foi tudo muito rápido, não tivemos muito tempo para divulgar e organizar melhor, mas ainda assim eu digo que foi um sucesso; ao fim tivemos tivemos 8 guerreiros que conseguiram resolver o problema.&lt;/p&gt;
+
+&lt;p&gt;Inicialmente no encontro rolou uma troca de experiências, eu falei um pouco do meu trabalho com &lt;a href=&#34;https://www.djangoproject.com/&#34;&gt;Django&lt;/a&gt;, o &lt;a href=&#34;https://twitter.com/j_renato777&#34;&gt;José Renato&lt;/a&gt; falou da experiência dele com &lt;a href=&#34;http://web2py.com/&#34;&gt;Web2Py&lt;/a&gt;, o &lt;a href=&#34;https://twitter.com/kalyfabdalla&#34;&gt;Kalyf&lt;/a&gt; falou do seu trabalho na Iniciação Científica também, o &lt;a href=&#34;https://twitter.com/erickboliveira&#34;&gt;Erick&lt;/a&gt; falou do que ele fez no seu TCC, também tinha uma galera que não conhecia a linguagem que foi lá pra aprender (e são todos bem-vindos =D), então a gente fez uma introdução ao Python lá, mostramos o básico pra gente começar, fizemos uns live demos lá mostrando o poder de Python e depois partimos pro Coding Dojo.&lt;/p&gt;
+
+&lt;p&gt;Sobre o Dojo, pouca gente não conhecia como funcionava o Dojo, então explicamos como funciona e fomos escolher o problema. Não tivemos muito problema pra escolher, acabamos optando pelo problema dos &lt;a href=&#34;http://dojopuzzles.com/problemas/exibe/diamantes/&#34;&gt;Diamantes&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nós tivemos um pouco mais de dificuldade do que imaginávamos que íamos ter :p, mas acontece. E no fim finalmente chegamos a essa solução: &lt;a href=&#34;https://gist.github.com/gtsalles/3905334dfea31dca1005&#34;&gt;https://gist.github.com/gtsalles/3905334dfea31dca1005&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;O objetivo do grupo é engrandecer a comunidade existente e agregar uma quantidade maior de membros, e acredito, e desejo, que a gente consiga atingir esse objetivo.&lt;/p&gt;
+
+&lt;p&gt;E que venham os próximos encontros. o/&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
